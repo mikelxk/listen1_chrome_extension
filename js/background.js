@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* global GithubClient */
-chrome.action.onClicked.addListener((tab) => {
+(chrome.action || chrome.browserAction).onClicked.addListener((tab) => {
   chrome.tabs.create(
     {
       url: chrome.runtime.getURL('listen1.html'),
